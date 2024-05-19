@@ -1,6 +1,8 @@
 typedef enum { // Definindo uma enumeração de códigos de erro para ficar mais
                // legível de identificar o que cada código significa
   OK,          // Código de sucesso de execução
+  MAX_FUNCIONARIO, // Código de erro para o limite máximo de funcionarios
+  SEM_FUNCIONARIO, // Código de erro para não há funcionários cadastrados
   ABRIR,          // Código de não foi possível abrir o arquivo
   FECHAR,         // Código de não foi possível fechar o arquivo
   ESCREVER,       // Código de não foi possível escrever no arquivo
@@ -38,3 +40,20 @@ typedef struct Cadastro_Produto {
 int criar(Produto produtos[], int *pos);
 int listar(Produto produtos[], int pos);
 int calcular(Produto produtos[], int pos);
+
+
+// Itens necessários para o exercício 6
+#define TOTAL_REGISTROS 100
+
+typedef struct {
+    char nome[20];
+    int idade;
+    float salario;
+} Funcionario;
+
+typedef ERROS (*funcao_colaborador)(Funcionario[], int*);
+
+ERROS adicionar_funcionario(Funcionario registro[], int *pos);
+ERROS listar_funcionario(Funcionario registro[], int *pos);
+ERROS salvar_funcionario(Funcionario registro[], int *pos);
+ERROS carregar_funcionario(Funcionario registro[], int *pos);
