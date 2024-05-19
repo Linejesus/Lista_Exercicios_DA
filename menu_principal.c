@@ -1,6 +1,12 @@
 #include <stdio.h> // Importa a biblioteca stdio.h para que possamos utilizar as funções de entrada e saída padrão de dados
 #include "funcoes.h" // Importa o arquivo funcoes.h para que possamos utilizar as funções declaradas nele
 
+void clearBuffer() {
+  int c;
+  while ((c = getchar()) != '\n' && c != EOF) {
+  }
+}
+
 int main() { // Função principal
   
 funcao funcoes[] = {soma_elementos, manipulacao_strings, cadastro_struct, operacoes_matriciais,

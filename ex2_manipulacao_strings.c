@@ -2,11 +2,6 @@
 #include <stdio.h> 
 #include <string.h>
 
-void clearBuffer() { 
-  int c; 
-  while ((c = getchar()) != '\n' && c != EOF); 
-} 
-
 void upper(char s[])
 {
   for(int i = 0; s[i] != '\0'; i++)

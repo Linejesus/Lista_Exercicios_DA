@@ -23,3 +23,18 @@ ERROS calculo_estatisticas(); // Assinatura da função de cálculo de estatíst
 ERROS manipulacao_tempo(); // Assinatura da função de manipulação de tempo
 
 void clearBuffer(); // Assinatura da função de limpar buffer
+
+
+
+// Itens necessários para o exercício 3
+#define MAX_PRODUTOS 50
+
+typedef struct Cadastro_Produto {
+  char nome[50];
+  float preco;
+  int quant;
+} Produto;
+
+int criar(Produto produtos[], int *pos);
+int listar(Produto produtos[], int pos);
+int calcular(Produto produtos[], int pos);
